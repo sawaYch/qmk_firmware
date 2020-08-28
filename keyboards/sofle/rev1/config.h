@@ -38,3 +38,7 @@
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
+/* define RGB PIN */
+#define RGB_DI_PIN D3   	 	// elite-C use D3 pin for RGB
+#define RGBLED_NUM 12    		// Number of LEDs
+#define RGBLED_SPLIT { 8, 8 } 	// number of LEDs on each side
