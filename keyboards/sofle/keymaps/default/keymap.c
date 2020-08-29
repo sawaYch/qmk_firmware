@@ -6,6 +6,7 @@
 #include <string.h>
 #include <quantum_keycodes.h>
 #include <tmk_core/common/action_code.h>
+#include <tmk_core/common/action_layer.h>
 #include <tmk_core/common/action.h>
 #include <tmk_core/common/progmem.h>
 #include <quantum.h>
@@ -284,7 +285,7 @@ static void print_status_narrow(void) {
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-    if (!is_keyboard_master()) {
+    if (is_keyboard_master()) {
         return OLED_ROTATION_270;
     }
     return rotation;
@@ -293,9 +294,9 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 void oled_task_user(void) {
     if (is_keyboard_master()) {
-        render_sawa_logo();
-    } else {
         print_status_narrow();
+    } else {
+        render_sawa_logo();
     }
 }
 
