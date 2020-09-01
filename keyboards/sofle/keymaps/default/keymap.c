@@ -14,6 +14,7 @@
 #include <tmk_core/common/keycode.h>
 #include <keycode.h>
 #include <quantum/rgblight_list.h>
+#include <quantum/process_keycode/process_combo.h>
 
 
 #define LAYOUT( \

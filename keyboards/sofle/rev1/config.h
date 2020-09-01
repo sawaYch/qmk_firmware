@@ -45,3 +45,4 @@
 
 /* must define COMBO keylist count here */
 #define COMBO_COUNT 1
+#define COMBO_TERM 1500
