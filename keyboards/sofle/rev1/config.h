@@ -42,3 +42,6 @@
 #define RGB_DI_PIN D3   	 	// elite-C use D3 pin for RGB
 #define RGBLED_NUM 12    		// Number of LEDs
 #define RGBLED_SPLIT { 8, 8 } 	// Number of LEDs on each side
+
+/* must define COMBO keylist count here */
+#define COMBO_COUNT 1
