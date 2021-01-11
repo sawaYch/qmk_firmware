@@ -502,16 +502,16 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 #endif
 
 
-#ifdef RGBLIGHT_ENABLE
-/*
-    LED underglow
-*/
-bool led_update_user(led_t led_state) {
-	sethsv(HSV_WHITE, (LED_TYPE *)&led[0]); // led 0
-	sethsv(HSV_RED,   (LED_TYPE *)&led[1]); // led 1
-	sethsv(HSV_GREEN, (LED_TYPE *)&led[2]); // led 2
-	rgblight_set();
-return true;
-}
+// #ifdef RGBLIGHT_ENABLE
+// /*
+//     LED underglow
+// */
+// bool led_update_user(led_t led_state) {
+// 	sethsv(HSV_WHITE, (LED_TYPE *)&led[0]); // led 0
+// 	sethsv(HSV_RED,   (LED_TYPE *)&led[1]); // led 1
+// 	sethsv(HSV_GREEN, (LED_TYPE *)&led[2]); // led 2
+// 	rgblight_set();
+// return true;
+// }
 
-#endif
+// #endif

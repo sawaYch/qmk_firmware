@@ -39,10 +39,40 @@
 #define NO_ACTION_FUNCTION
 
 /* define RGB PIN */
-#define RGB_DI_PIN D3   	 	// elite-C use D3 pin for RGB
-#define RGBLED_NUM 12    		// Number of LEDs
-#define RGBLED_SPLIT { 8, 8 } 	// Number of LEDs on each side
+// #define RGB_DI_PIN D3   	 	// elite-C use D3 pin for RGB
+// #define RGBLED_NUM 12    		// Number of LEDs
+// #define RGBLED_SPLIT { 8, 8 } 	// Number of LEDs on each side
 
 /* must define COMBO keylist count here */
 #define COMBO_COUNT 1
-#define COMBO_TERM 1500
+#define COMBO_TERM 300
+
+/* ps2 trackpad config, using interrupt
+    try to use D3 pin (original for RGB DI)
+    and F4 pin (should be free to use)
+    please refer to elite-C pin out: https://deskthority.net/wiki/Elite-C
+*/
+/*
+#ifdef PS2_USE_INT
+#define PS2_CLOCK_PORT  PORTD
+#define PS2_CLOCK_PIN   PIND
+#define PS2_CLOCK_DDR   DDRD
+#define PS2_CLOCK_BIT   3
+#define PS2_DATA_PORT   PORTF
+#define PS2_DATA_PIN    PINF
+#define PS2_DATA_DDR    DDRF
+#define PS2_DATA_BIT    4
+
+#define PS2_INT_INIT()  do {    \
+    EICRA |= ((1<<ISC21) |      \
+              (0<<ISC20));      \
+} while (0)
+#define PS2_INT_ON()  do {      \
+    EIMSK |= (1<<INT2);         \
+} while (0)
+#define PS2_INT_OFF() do {      \
+    EIMSK &= ~(1<<INT2);        \
+} while (0)
+#define PS2_INT_VECT   INT3_vect
+#endif
+*/
